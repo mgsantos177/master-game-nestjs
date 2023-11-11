@@ -1,0 +1,26 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Category {
+  ARTES
+  CIENCIAS
+  ENTRETERIMENTO
+  ESPORTES
+  GEOGRAFIA
+  HISTORIA
+}
+
+model Card {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  question   String
+  options    String[]
+  answer     String
+  category   Category
+  isAnswered Boolean  @default(false)
+}
