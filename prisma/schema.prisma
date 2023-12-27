@@ -10,7 +10,7 @@ generator client {
 enum Category {
   ARTES
   CIENCIAS
-  ENTRETERIMENTO
+  ENTRETENIMENTO
   ESPORTES
   GEOGRAFIA
   HISTORIA
